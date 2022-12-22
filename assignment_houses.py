@@ -38,22 +38,22 @@ houses
 alt.data_transformers.enable('default', max_rows=None)
 
 # Commented out IPython magic to ensure Python compatibility.
-# %%writefile home.py
+%%writefile home.py
+
+import streamlit as st
+import pandas as pd
+import altair as alt
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 # 
-# import streamlit as st
-# import pandas as pd
-# import altair as alt
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# 
-# houses = pd.read_csv('/content/houses.csv')
-# houses=houses.dropna()
-# houses=houses[houses['area']<400]
-# houses=houses[houses['total (R$)']<8000]
+houses = pd.read_csv('/content/houses.csv')
+houses=houses.dropna()
+houses=houses[houses['area']<400]
+houses=houses[houses['total (R$)']<8000]
 # 
 # 
-# st.title('houses Visualization 🏡')
+st.title('houses Visualization 🏡')
 # st.header(' Background of the Dataset ')
 # 
 # 
